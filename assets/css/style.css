@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    color: green
+}
+
+body {
+    background-color: antiquewhite;
+}
+
+main {
+    display: flex;
+    flex-flow: column;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+header {
+    background-color: rgb(53, 42, 25);
+    border-bottom: 10px solid green;
+}
+
+footer {
+    background-color: rgb(53, 42, 25);
+    border-top: 10px solid green;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+footer p {
+    padding: 25px;
+    font-size: 20px;
+}
+
+.my-nav {
+    font-size: 50px;
+    color: green;
+}
+
+.my-nav:hover {
+    color: green;
+    text-shadow: 2px 2px 8px;
+}
+
+.subhead {
+    font-size: 25px;
+    margin: 20px;
+}
+
+#now-info-box {
+    border: 5px solid;
+    padding: 10px;
+    display: flex;
+    flex-flow: column;
+    font-size: 20px;
+    background-color: rgb(233, 202, 166);
+}
+
+#five-day-box {
+    border: 5px solid;
+    padding: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    background-color: rgb(53, 42, 25);
+}
+
+#day-of-five {
+    border: 5px solid;
+    padding: 10px;
+    background-color: rgb(233, 202, 166);
+}
+
+@media (max-width: 1000px) {
+    #day-of-five {
+        min-width: 50%;
+    }
+}
+
+@media (max-width: 550px) {
+    #day-of-five {
+        min-width: 100%;
+    }
+
+    .my-nav {
+        font-size: 30px;
+    }
+}
