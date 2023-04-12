@@ -33,13 +33,13 @@ function handleSubmit(event) {
             historyItems.push(city)
             localStorage.setItem('history', JSON.stringify(historyItems))
         }
-        fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=f75e10cea0f691b69cc9dce7cec926a9&units=imperial`)
+        fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=f75e10cea0f691b69cc9dce7cec926a9&units=imperial`)
             .then(function (response) {
                 return response.json()
             })
             .then(function (data) {
                 console.log(data)
-                fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=${data[0].lat}&lon=${data[0].lon}&appid=f75e10cea0f691b69cc9dce7cec926a9&units=imperial`)
+                fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${data[0].lat}&lon=${data[0].lon}&appid=f75e10cea0f691b69cc9dce7cec926a9&units=imperial`)
                     .then(function (response) {
                         return response.json()
                     })
